@@ -20,3 +20,4 @@ in anchors (mailto):
 in anchors (mailto and label):
 
     <a href="mailto:test@test.com">test@test.com</a>
+
