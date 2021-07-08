@@ -28,8 +28,12 @@ Rot13 = {
     },
 
     write: function(a) {
-        document.currentScript.insertAdjacentHTML(
-            'beforebegin', Rot13.convert(a)
-        )        
+        if (window.document.documentMode) {
+            document.write(Rot13.convert(a));
+        } else {
+            document.currentScript.insertAdjacentHTML(
+                'beforebegin', Rot13.convert(a)
+            )       
+        }        
     }
 };
